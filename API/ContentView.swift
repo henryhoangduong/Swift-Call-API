@@ -18,6 +18,7 @@ struct ContentView: View {
             }
             Text(user?.login ?? "Login placeholder").bold().font(.title3)
             Text(user?.bio ?? "Bio placeholder").padding()
+            Text(user?.location ?? "Bio placeholder").padding()
             Spacer()
         }
         .padding()
@@ -54,6 +55,7 @@ struct GithubUser: Codable {
     let login: String
     let avatarUrl: String
     let bio: String
+    let location: String
 }
 
 enum GHError: Error {
